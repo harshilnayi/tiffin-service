@@ -44,8 +44,8 @@ This project was created for learning purposes. It lacks advanced production sec
 You're encouraged to fork or improve it further.
 
 👨‍💻 Contributors
-- Harshil Nayi — Developer  
-- Amit Prajapati — Contributor
+- Harshil Nayi  
+- Amit Prajapati 
 
 📜 License
 This project is open-source and free to use for educational purposes. Feel free to improve or rebuild it!
