@@ -1,0 +1,66 @@
+<!-- Admin Settings Page (admin-settings.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Settings</title>
+    <link rel="stylesheet" href="D:\harshil\try-tiffin-food-website\adminsettingscss.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #admin-settings {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Settings</h1>
+
+    <!-- Admin Settings Form -->
+    <div id="admin-settings">
+        <h2>Configure Admin Settings:</h2>
+        <form>
+            <label for="notification">
+                <input type="checkbox" id="notification" name="notification">
+                Receive admin notifications
+            </label>
+            <label for="access-level">
+                <input type="checkbox" id="access-level" name="access-level">
+                Grant higher access level to users
+            </label>
+            <input type="submit" value="Save Settings">
+        </form>
+    </div>
+</body>
+</html>

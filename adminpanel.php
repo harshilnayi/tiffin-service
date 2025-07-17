@@ -1,0 +1,91 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("Location: admin_login.php");
+  exit();
+}
+$name = $_SESSION['username'];
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service Dashboard</title>
+    <link rel="stylesheet" href="public\css\admin.css">
+</head>
+<body>
+    <header>
+        <h1>Tiffin Service Dashboard</h1>
+    </header>
+    
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <ul>
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="adminorder.php">Orders</a></li>
+                <li><a href="adminshowregisterduser.php">Registered user</a></li>
+                <li><a href="adminshowregisterduser.php">Customers</a></li>
+                <li><a href="popularfood_admin.php">Menu management</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <!--main contain-->
+        <main class="content">
+            <h2>Dashboard</h2>
+            <div class="dashboard-summary">
+                <div class="summary-box">
+                    <h3>Total Orders</h3>
+                    <p>125</p>
+                </div>
+                <div class="summary-box">
+                    <h3>Total Revenue</h3>
+                    <p>3500</p>
+                </div>
+                <div class="summary-box">
+                    <h3>Active Customers</h3>
+                    <p>300</p>
+                </div>
+            </div>
+            <div class="recent-orders">
+                <h3>Recent Orders</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#12345</td>
+                            <td>John Doe</td>
+                            <td>250.00</td>
+                            <td>Processing</td>
+                        </tr>
+                        <tr>
+                            <td>#12346</td>
+                            <td>Jane Smith</td>
+                            <td>250.00</td>
+                            <td>Delivered</td>
+                        </tr>
+                        <!-- Add more order rows here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="analytics">
+                <h3>Analytics</h3>
+                <div class="chart">
+                    <!-- Placeholder for a chart or graph -->
+                </div>
+            </div>
+        </main>
+        
+    </div>
+</body>
+</html>

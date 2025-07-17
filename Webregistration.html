@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Tiffin Service Registration</title>
+  <link rel="stylesheet" href="public/css/Registration1.css">
+  <style>
+    body {
+      background-image: url("C:\xampp\htdocs\try-tiffin-food-website\images\lunch.jpg");
+      background-size: 500px 500px;
+      background-color:rgb(250, 250, 248);
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Register for our Online Tiffin Service</h1>
+    <form action="Webregistration.php" method="POST">
+      <div class="form-group">
+        
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name" required><br><br> 
+      </div>
+      <div class="form-group">
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone"></label>
+        <input type="number" id="phone" name="phone" placeholder="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="password" required>
+      </div><br>
+      <div class="submit" >
+      <input type="submit" value="Register" name="sb">
+
+    </div>
+    </form>
+  </div>
+</body>
+</html>

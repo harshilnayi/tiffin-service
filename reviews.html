@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service Reviews (Admin)</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\try-tiffin-food-website\public\css\reviews.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #review-form {
+            margin-bottom: 20px;
+        }
+        #reviews {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .review {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tiffin Service Reviews (Admin)</h1>
+
+    <!-- Review Form -->
+    <div id="review-form">
+        <h2>Add a New Review:</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+
+    <!-- Display Reviews -->
+    <div id="reviews">
+        <h2>Existing Reviews:</h2>
+        <!-- Sample Review -->
+        <div class="review">
+            <strong>John Doe</strong><br>
+            Rating: 4/5<br>
+            Comment: "Great tiffin service, delicious food!"
+        </div>
+        <!-- Additional reviews will be added dynamically using JavaScript -->
+    </div>
+
+    <!-- JavaScript for adding reviews (you can use a more sophisticated solution in a real scenario) -->
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.querySelector("#name").value;
+            const rating = document.querySelector("#rating").value;
+            const comment = document.querySelector("#comment").value;
+
+            // Create review element
+            const reviewElement = document.createElement("div");
+            reviewElement.classList.add("review");
+            reviewElement.innerHTML = `
+                <strong>${name}</strong><br>
+                Rating: ${rating}/5<br>
+                Comment: "${comment}"
+            `;
+
+            // Add review to the reviews section
+            document.querySelector("#reviews").appendChild(reviewElement);
+
+            // Reset the form
+            document.querySelector("form").reset();
+        });
+    </script>
+</body>
+</html>
